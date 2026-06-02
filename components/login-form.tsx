@@ -68,9 +68,9 @@ export function LoginForm({
 
         <Field>
           <FieldDescription className="text-center">
-            Não tem uma conta?{" "}
-            <a href="#" className="underline underline-offset-4">
-              Cadastre-se
+            Don&apos;t have an account?{" "}
+            <a href="/registro" className="underline underline-offset-4">
+              Sign up
             </a>
           </FieldDescription>
         </Field>
