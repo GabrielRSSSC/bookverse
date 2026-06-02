@@ -7,8 +7,8 @@ import { BookOpen } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const STORAGE_KEY = "bookverse-splash-seen"
-const VISIBLE_DURATION = 2400
-const FADE_DURATION = 600
+const VISIBLE_DURATION = 3400
+const FADE_DURATION = 2600
 
 type Phase = "hidden" | "visible" | "leaving"
 
