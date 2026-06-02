@@ -1,8 +1,7 @@
-import { Suspense } from "react"
 import Link from "next/link"
 import { BookOpen } from "lucide-react"
 
-import { LoginForm } from "@/components/login-form"
+import { SignupForm } from "@/components/signup-form"
 
 function PersonSilhouette({ className }: { className?: string }) {
   return (
@@ -18,15 +17,7 @@ function PersonSilhouette({ className }: { className?: string }) {
   )
 }
 
-function LoginFallback() {
-  return (
-    <div className="w-full max-w-xs">
-      <div className="h-9 w-full animate-pulse rounded-3xl bg-muted" />
-    </div>
-  )
-}
-
-export default function LoginPage() {
+export default function SignupPage() {
   return (
     <div className="grid min-h-svh lg:grid-cols-2">
       <div className="flex flex-col gap-4 bg-background p-6 md:p-10">
@@ -41,21 +32,19 @@ export default function LoginPage() {
         </div>
         <div className="flex flex-1 items-center justify-center">
           <div className="w-full max-w-xs">
-            <Suspense fallback={<LoginFallback />}>
-              <LoginForm />
-            </Suspense>
+            <SignupForm />
           </div>
         </div>
       </div>
 
-      <div className="relative hidden flex-col items-center justify-center gap-8 bg-muted p-16 lg:flex">
+      <div className="relative hidden flex-col items-center justify-center gap-8 bg-muted p-12 lg:flex">
         <div className="flex size-24 items-center justify-center rounded-full border-2 border-border bg-card text-foreground">
           <PersonSilhouette className="size-16" />
         </div>
 
-        <blockquote className="max-w-xs text-center">
+        <blockquote className="max-w-sm text-center">
           <p className="text-2xl font-bold leading-tight text-foreground">
-            O melhor leitor de livros que eu já usei!
+            Encontrei livros que jamais teria descoberto sozinho!
           </p>
         </blockquote>
 
