@@ -20,14 +20,11 @@ const initialState: LoginState = {}
 
 export function LoginForm() {
   const searchParams = useSearchParams()
-  const redirectTo = searchParams.get("redirectTo") ?? "/biblioteca"
+  const redirectTo = searchParams.get("redirectTo") ?? "/home"
 
   const [showPassword, setShowPassword] = useState(false)
   const [remember, setRemember] = useState(false)
-  const [state, formAction, isPending] = useActionState(
-    login,
-    initialState
-  )
+  const [state, formAction, isPending] = useActionState(login, initialState)
 
   return (
     <form action={formAction} className="flex flex-col gap-6">
@@ -75,7 +72,7 @@ export function LoginForm() {
               type="button"
               onClick={() => setShowPassword((s) => !s)}
               aria-label={showPassword ? "Esconder senha" : "Mostrar senha"}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground transition-colors hover:text-foreground"
+              className="absolute top-1/2 right-3 -translate-y-1/2 text-muted-foreground transition-colors hover:text-foreground"
             >
               {showPassword ? (
                 <EyeOff className="size-4" />

@@ -1,33 +1,33 @@
-"use server";
+"use server"
 
-import { redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
+import { redirect } from "next/navigation"
+import { createClient } from "@/lib/supabase/server"
 
 export type LoginState = {
-  error?: string;
-};
+  error?: string
+}
 
 export async function login(
   _prev: LoginState,
   formData: FormData
 ): Promise<LoginState> {
-  const email = String(formData.get("email") ?? "").trim();
-  const password = String(formData.get("password") ?? "");
-  const redirectTo = String(formData.get("redirectTo") ?? "/biblioteca");
+  const email = String(formData.get("email") ?? "").trim()
+  const password = String(formData.get("password") ?? "")
+  const redirectTo = String(formData.get("redirectTo") ?? "/home")
 
   if (!email || !password) {
-    return { error: "Preencha e-mail e senha." };
+    return { error: "Preencha e-mail e senha." }
   }
 
-  const supabase = await createClient();
+  const supabase = await createClient()
   const { error } = await supabase.auth.signInWithPassword({
     email,
     password,
-  });
+  })
 
   if (error) {
-    return { error: "E-mail ou senha inválidos." };
+    return { error: "E-mail ou senha inválidos." }
   }
 
-  redirect(redirectTo);
+  redirect(redirectTo)
 }

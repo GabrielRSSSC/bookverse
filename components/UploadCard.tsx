@@ -23,22 +23,28 @@ type UploadedBook = {
 function readFileAsText(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
     const reader = new FileReader()
-    reader.onerror = () => reject(reader.error ?? new Error("Falha ao ler arquivo"))
+    reader.onerror = () =>
+      reject(reader.error ?? new Error("Falha ao ler arquivo"))
     reader.onload = () => resolve(String(reader.result ?? ""))
     reader.readAsText(file)
   })
 }
 
 function inferTitleFromName(name: string): string {
-  return name
-    .replace(/\.(txt|epub|md)$/i, "")
-    .replace(/[_-]+/g, " ")
-    .replace(/\b\w/g, (c) => c.toUpperCase())
-    .trim() || "Sem título"
+  return (
+    name
+      .replace(/\.(txt|epub|md)$/i, "")
+      .replace(/[_-]+/g, " ")
+      .replace(/\b\w/g, (c) => c.toUpperCase())
+      .trim() || "Sem título"
+  )
 }
 
 function inferAuthorFromContent(content: string): string {
-  const lines = content.split(/\r?\n/).map((l) => l.trim()).filter(Boolean)
+  const lines = content
+    .split(/\r?\n/)
+    .map((l) => l.trim())
+    .filter(Boolean)
   for (const line of lines.slice(0, 20)) {
     const match =
       line.match(/^por\s+(.+)$/i) ??
@@ -129,7 +135,9 @@ export function UploadCard({ onUploaded }: UploadCardProps) {
       })
       router.refresh()
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Falha ao processar arquivo")
+      setError(
+        err instanceof Error ? err.message : "Falha ao processar arquivo"
+      )
     } finally {
       setIsLoading(false)
     }
@@ -175,7 +183,7 @@ export function UploadCard({ onUploaded }: UploadCardProps) {
           <br />
           arquivo aqui
         </p>
-        <p className="text-[10px] uppercase tracking-widest text-muted-foreground">
+        <p className="text-[10px] tracking-widest text-muted-foreground uppercase">
           .txt · .epub · .md
         </p>
       </label>
@@ -191,7 +199,7 @@ export function UploadCard({ onUploaded }: UploadCardProps) {
 
       {uploaded.length > 0 && (
         <div className="rounded-2xl border border-border bg-card p-3">
-          <p className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+          <p className="mb-2 flex items-center gap-2 text-xs font-semibold tracking-wide text-muted-foreground uppercase">
             <BookOpen className="size-3.5" />
             Enviados nesta sessão
           </p>

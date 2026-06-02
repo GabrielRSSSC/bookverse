@@ -14,14 +14,22 @@ type HeaderProps = {
 }
 
 const PUBLIC_LINKS = [
-  { href: "/", label: "Home", key: "home" as const },
-  { href: "/biblioteca", label: "Minha Biblioteca", key: "biblioteca" as const },
+  { href: "/home", label: "Home", key: "home" as const },
+  {
+    href: "/biblioteca",
+    label: "Minha Biblioteca",
+    key: "biblioteca" as const,
+  },
   { href: "/biblioteca#upload", label: "Upload", key: "upload" as const },
 ]
 
 const APP_LINKS = [
-  { href: "/", label: "Home", key: "home" as const },
-  { href: "/biblioteca", label: "Minha Biblioteca", key: "biblioteca" as const },
+  { href: "/home", label: "Home", key: "home" as const },
+  {
+    href: "/biblioteca",
+    label: "Minha Biblioteca",
+    key: "biblioteca" as const,
+  },
   { href: "/biblioteca#upload", label: "Upload", key: "upload" as const },
   { href: "/perfil", label: "Perfil", key: "perfil" as const },
 ]
@@ -41,7 +49,7 @@ export function Header({ variant = "public", active }: HeaderProps) {
     <header className="w-full bg-background px-6 py-4">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6">
         <Link
-          href="/"
+          href="/home"
           className="flex shrink-0 items-center gap-2 text-xl font-bold text-foreground"
         >
           <BookOpen className="size-6" strokeWidth={2.5} />
@@ -65,7 +73,7 @@ export function Header({ variant = "public", active }: HeaderProps) {
             <input
               type="text"
               placeholder="Pesquisar"
-              className="w-full rounded-full border border-border bg-card px-4 py-2 text-sm text-foreground outline-none transition placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/30"
+              className="w-full rounded-full border border-border bg-card px-4 py-2 text-sm text-foreground transition outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/30"
             />
           </div>
         ) : (
@@ -105,7 +113,7 @@ export function Header({ variant = "public", active }: HeaderProps) {
             <input
               type="text"
               placeholder="Pesquisar"
-              className="mt-2 w-full rounded-full border border-border bg-card px-4 py-2 text-sm text-foreground outline-none transition placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/30"
+              className="mt-2 w-full rounded-full border border-border bg-card px-4 py-2 text-sm text-foreground transition outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/30"
             />
           )}
         </nav>

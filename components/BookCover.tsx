@@ -7,7 +7,11 @@ type BookCoverProps = {
   showTitle?: boolean
 }
 
-export function BookCover({ book, className, showTitle = true }: BookCoverProps) {
+export function BookCover({
+  book,
+  className,
+  showTitle = true,
+}: BookCoverProps) {
   return (
     <div
       className={cn(
@@ -56,9 +60,24 @@ export function BookCover({ book, className, showTitle = true }: BookCoverProps)
             fill={book.cover.accent}
             opacity="0.95"
           />
-          <rect x="55" y="55" width="4" height="75" fill={book.cover.text} opacity="0.9" />
-          <path d="M59 60 L95 95 L59 95 Z" fill={book.cover.text} opacity="0.85" />
-          <path d="M55 70 L25 95 L55 95 Z" fill={book.cover.text} opacity="0.7" />
+          <rect
+            x="55"
+            y="55"
+            width="4"
+            height="75"
+            fill={book.cover.text}
+            opacity="0.9"
+          />
+          <path
+            d="M59 60 L95 95 L59 95 Z"
+            fill={book.cover.text}
+            opacity="0.85"
+          />
+          <path
+            d="M55 70 L25 95 L55 95 Z"
+            fill={book.cover.text}
+            opacity="0.7"
+          />
           <circle cx="92" cy="35" r="9" fill={book.cover.text} opacity="0.9" />
           <path
             d="M85 35 Q92 28 99 35 Q92 42 85 35"
@@ -84,7 +103,13 @@ export function BookCover({ book, className, showTitle = true }: BookCoverProps)
             fill={book.cover.text}
             opacity="0.35"
           />
-          <circle cx="92" cy="35" r="10" fill={book.cover.text} opacity="0.85" />
+          <circle
+            cx="92"
+            cy="35"
+            r="10"
+            fill={book.cover.text}
+            opacity="0.85"
+          />
         </svg>
       )}
 
@@ -94,7 +119,14 @@ export function BookCover({ book, className, showTitle = true }: BookCoverProps)
           className="absolute inset-0 h-full w-full"
           aria-hidden="true"
         >
-          <ellipse cx="60" cy="180" rx="55" ry="40" fill={book.cover.text} opacity="0.18" />
+          <ellipse
+            cx="60"
+            cy="180"
+            rx="55"
+            ry="40"
+            fill={book.cover.text}
+            opacity="0.18"
+          />
           <path
             d="M30 180 Q35 130 20 90 Q10 60 30 40"
             stroke={book.cover.accent}
@@ -142,13 +174,13 @@ export function BookCover({ book, className, showTitle = true }: BookCoverProps)
       {showTitle && (
         <div className="relative flex h-full flex-col items-center justify-start p-4 pt-5 text-center">
           <h3
-            className="text-lg font-bold leading-tight drop-shadow-sm"
+            className="text-lg leading-tight font-bold drop-shadow-sm"
             style={{ color: book.cover.text }}
           >
             {book.title}
           </h3>
           <p
-            className="mt-1 text-[10px] uppercase tracking-widest opacity-70"
+            className="mt-1 text-[10px] tracking-widest uppercase opacity-70"
             style={{ color: book.cover.text }}
           >
             {book.author}

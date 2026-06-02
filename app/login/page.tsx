@@ -32,7 +32,7 @@ export default function LoginPage() {
       <div className="flex flex-col gap-4 bg-background p-6 md:p-10">
         <div className="flex justify-center gap-2 md:justify-start">
           <Link
-            href="/"
+            href="/home"
             className="flex items-center gap-2 text-lg font-bold text-foreground"
           >
             <BookOpen className="size-6" strokeWidth={2.5} />
@@ -54,7 +54,7 @@ export default function LoginPage() {
         </div>
 
         <blockquote className="max-w-xs text-center">
-          <p className="text-2xl font-bold leading-tight text-foreground">
+          <p className="text-2xl leading-tight font-bold text-foreground">
             O melhor leitor de livros que eu já usei!
           </p>
         </blockquote>

@@ -4,7 +4,13 @@ import { redirect } from "next/navigation"
 import { BookOpen, LogOut, Mail, User as UserIcon } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 
 import { getCurrentUser } from "@/lib/session"
 import { logout } from "@/app/perfil/actions"
@@ -33,8 +39,7 @@ async function ProfileContent() {
     redirect("/login?redirectTo=/perfil")
   }
 
-  const fullName =
-    (user.user_metadata?.full_name as string | undefined) ?? ""
+  const fullName = (user.user_metadata?.full_name as string | undefined) ?? ""
   const displayName = fullName || user.email?.split("@")[0] || "Leitor"
   const initials = initialsFrom(fullName, user.email ?? "")
 
@@ -42,7 +47,7 @@ async function ProfileContent() {
     <div className="mx-auto max-w-2xl">
       <div className="flex items-center gap-3">
         <Link
-          href="/"
+          href="/home"
           className="flex items-center gap-2 text-lg font-bold text-foreground"
         >
           <BookOpen className="size-6" strokeWidth={2.5} />
@@ -78,7 +83,7 @@ async function ProfileContent() {
           <div className="flex items-center gap-3 rounded-2xl bg-muted/50 px-4 py-3">
             <UserIcon className="size-4 text-muted-foreground" />
             <div className="flex flex-col">
-              <span className="text-xs uppercase tracking-wide text-muted-foreground">
+              <span className="text-xs tracking-wide text-muted-foreground uppercase">
                 Nome
               </span>
               <span className="text-sm font-medium">
@@ -90,7 +95,7 @@ async function ProfileContent() {
           <div className="flex items-center gap-3 rounded-2xl bg-muted/50 px-4 py-3">
             <Mail className="size-4 text-muted-foreground" />
             <div className="flex flex-col">
-              <span className="text-xs uppercase tracking-wide text-muted-foreground">
+              <span className="text-xs tracking-wide text-muted-foreground uppercase">
                 E-mail
               </span>
               <span className="text-sm font-medium">{user.email}</span>
@@ -105,11 +110,7 @@ async function ProfileContent() {
         </Button>
 
         <form action={logout} className="sm:flex-1">
-          <Button
-            type="submit"
-            variant="destructive"
-            className="w-full"
-          >
+          <Button type="submit" variant="destructive" className="w-full">
             <LogOut className="size-4" />
             Sair da conta
           </Button>

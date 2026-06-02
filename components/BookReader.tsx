@@ -62,8 +62,11 @@ export function BookReader({ book }: BookReaderProps) {
 
   const percent = Math.min(
     100,
-    Math.round(((chapterIndex * 100) / totalCh) +
-      ((paragraphIndex + 1) * 100) / (totalCh * Math.max(1, totalParas / totalCh)))
+    Math.round(
+      (chapterIndex * 100) / totalCh +
+        ((paragraphIndex + 1) * 100) /
+          (totalCh * Math.max(1, totalParas / totalCh))
+    )
   )
 
   useEffect(() => {
@@ -110,7 +113,7 @@ export function BookReader({ book }: BookReaderProps) {
       <header className="w-full px-6 py-4">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-6">
           <Link
-            href="/"
+            href="/home"
             className="flex items-center gap-2 text-xl font-bold text-foreground"
           >
             <BookOpen className="size-6" strokeWidth={2.5} />
@@ -124,9 +127,7 @@ export function BookReader({ book }: BookReaderProps) {
               ← Biblioteca
             </Link>
             <span className="text-muted-foreground">{book.title}</span>
-            <span className="text-muted-foreground">
-              {chapter?.title}
-            </span>
+            <span className="text-muted-foreground">{chapter?.title}</span>
             <span className="font-semibold text-foreground">{percent}%</span>
           </div>
         </div>
@@ -144,13 +145,13 @@ export function BookReader({ book }: BookReaderProps) {
             />
             <div className="flex h-full flex-col items-center justify-center p-4 text-center">
               <h2
-                className="text-base font-bold leading-tight"
+                className="text-base leading-tight font-bold"
                 style={{ color: book.cover.text }}
               >
                 {book.title}
               </h2>
               <p
-                className="mt-1 text-[10px] uppercase tracking-widest opacity-70"
+                className="mt-1 text-[10px] tracking-widest uppercase opacity-70"
                 style={{ color: book.cover.text }}
               >
                 {book.author}
@@ -196,7 +197,7 @@ export function BookReader({ book }: BookReaderProps) {
             <div className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-foreground/20 to-transparent" />
             <div className="grid h-full grid-cols-2">
               <div className="flex h-full flex-col gap-2 overflow-hidden p-6">
-                <p className="font-serif text-[10px] uppercase tracking-widest text-muted-foreground">
+                <p className="font-serif text-[10px] tracking-widest text-muted-foreground uppercase">
                   {book.title}
                 </p>
                 <p className="line-clamp-6 font-serif text-[11px] leading-relaxed text-foreground/80 italic">
@@ -258,10 +259,10 @@ export function BookReader({ book }: BookReaderProps) {
                 <div className="pointer-events-none absolute inset-y-0 left-1/2 z-10 w-10 -translate-x-1/2 bg-gradient-to-r from-foreground/10 via-transparent to-foreground/10" />
 
                 <div className="flex h-full flex-col gap-3 p-8 md:p-12">
-                  <p className="font-serif text-xs uppercase tracking-widest text-muted-foreground">
+                  <p className="font-serif text-xs tracking-widest text-muted-foreground uppercase">
                     {chapter?.title}
                   </p>
-                  <p className="font-serif text-sm leading-relaxed text-foreground/90 first-letter:text-2xl first-letter:font-bold first-letter:mr-1">
+                  <p className="font-serif text-sm leading-relaxed text-foreground/90 first-letter:mr-1 first-letter:text-2xl first-letter:font-bold">
                     {currentParagraph}
                   </p>
                 </div>
@@ -273,7 +274,8 @@ export function BookReader({ book }: BookReaderProps) {
                     </p>
                   ) : (
                     <p className="font-serif text-sm leading-relaxed text-muted-foreground italic">
-                      Fim do capítulo. Carregue em &ldquo;Próxima&rdquo; para continuar.
+                      Fim do capítulo. Carregue em &ldquo;Próxima&rdquo; para
+                      continuar.
                     </p>
                   )}
                 </div>

@@ -12,7 +12,9 @@ export default function BibliotecaPage() {
       return book ? { book, progress: entry.progress } : null
     })
     .filter(
-      (x): x is {
+      (
+        x
+      ): x is {
         book: NonNullable<ReturnType<typeof getBookById>>
         progress: number
       } => x !== null
@@ -44,7 +46,7 @@ export default function BibliotecaPage() {
             >
               <div className="relative">
                 <BookCover book={book} />
-                <span className="absolute bottom-3 right-3 rounded-full bg-foreground/85 px-2.5 py-1 text-xs font-semibold text-background">
+                <span className="absolute right-3 bottom-3 rounded-full bg-foreground/85 px-2.5 py-1 text-xs font-semibold text-background">
                   {progress}%
                 </span>
               </div>

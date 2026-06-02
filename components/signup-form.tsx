@@ -20,10 +20,7 @@ const initialState: SignupState = {}
 export function SignupForm() {
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirm, setShowConfirm] = useState(false)
-  const [state, formAction, isPending] = useActionState(
-    signup,
-    initialState
-  )
+  const [state, formAction, isPending] = useActionState(signup, initialState)
 
   return (
     <form action={formAction} className="flex flex-col gap-6">
@@ -86,7 +83,7 @@ export function SignupForm() {
               type="button"
               onClick={() => setShowPassword((s) => !s)}
               aria-label={showPassword ? "Esconder senha" : "Mostrar senha"}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground transition-colors hover:text-foreground"
+              className="absolute top-1/2 right-3 -translate-y-1/2 text-muted-foreground transition-colors hover:text-foreground"
             >
               {showPassword ? (
                 <EyeOff className="size-4" />
@@ -114,7 +111,7 @@ export function SignupForm() {
               type="button"
               onClick={() => setShowConfirm((s) => !s)}
               aria-label={showConfirm ? "Esconder senha" : "Mostrar senha"}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground transition-colors hover:text-foreground"
+              className="absolute top-1/2 right-3 -translate-y-1/2 text-muted-foreground transition-colors hover:text-foreground"
             >
               {showConfirm ? (
                 <EyeOff className="size-4" />

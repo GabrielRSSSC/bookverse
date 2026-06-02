@@ -39,9 +39,9 @@ const PEQUENO_PRINCIPE: BookChapter[] = [
   {
     title: "Capítulo I",
     paragraphs: [
-      "Era uma vez, quando eu tinha seis anos, vi num livro sobre a Floresta Virgem, chamado \"Histórias Vividas\", uma imagem majestosa. Mostrava uma jiboia a engolir um animal. Eis a cópia que fiz.",
+      'Era uma vez, quando eu tinha seis anos, vi num livro sobre a Floresta Virgem, chamado "Histórias Vividas", uma imagem majestosa. Mostrava uma jiboia a engolir um animal. Eis a cópia que fiz.',
       "Refleti longamente sobre as aventuras da selva. E consegui, com um lápis de cor, fazer o meu primeiro desenho. Mostrei a obra-prima às pessoas grandes e perguntei se o meu desenho lhes dava medo.",
-      "Responderam-me: \"Por que é que um chapéu causaria medo?\" O meu desenho não representava um chapéu. Representava uma jiboia digerindo um elefante. Como as pessoas grandes não conseguiam compreender, desenhei então o interior da jiboia, para que pudessem ver com clareza.",
+      'Responderam-me: "Por que é que um chapéu causaria medo?" O meu desenho não representava um chapéu. Representava uma jiboia digerindo um elefante. Como as pessoas grandes não conseguiam compreender, desenhei então o interior da jiboia, para que pudessem ver com clareza.',
     ],
   },
   {
@@ -49,7 +49,7 @@ const PEQUENO_PRINCIPE: BookChapter[] = [
     paragraphs: [
       "Vivi, pois, sozinho, sem alguém com quem falar verdadeiramente, até que, há seis anos, tive uma avaria no deserto do Sara. Qualquer coisa se tinha partido no motor do meu avião. Como levava comigo um mecânico passageiro, tentei reparar com ele.",
       "Mas a peça mais importante estava avariada e eu não dispunha de água potável para sobreviver até que passasse um caminhante qualquer. Assim, na manhã do sétimo dia, vi aparecer um menino estranho.",
-      "Pareceu-me que sonhava. Pedi-lhe que desenhasse um carneiro. Fiquei surpreso ao ver brotar, sob o lápis, a imagem de uma caixa. \"Que é isto? — perguntei. O carneiro está dentro da caixa.\" Foi assim que conheci o pequeno príncipe.",
+      'Pareceu-me que sonhava. Pedi-lhe que desenhasse um carneiro. Fiquei surpreso ao ver brotar, sob o lápis, a imagem de uma caixa. "Que é isto? — perguntei. O carneiro está dentro da caixa." Foi assim que conheci o pequeno príncipe.',
     ],
   },
   {
@@ -92,7 +92,7 @@ const MOBY_DICK: BookChapter[] = [
     paragraphs: [
       "A tripulação era composta por homens de várias partes do mundo. O arpoador Queequeg, por exemplo, era um selvagem tatuado, mas com a bondade mais pura que já vi em qualquer ser humano. Dormia ao meu lado no mesmo beliche.",
       "Acima de tudo, pairava a sombra de Moby Dick, a grande baleia branca, que já tinha deixado muitos navios destroçados e tripulações inteiras perdidas no mar. Ahab jurou vingança, e cada dia tornava essa obsessão mais viva.",
-      "A caçada começou. Dias de calma, noites de tempestade. O Pequod deslizava pelas ondas como um animal feroz. E quando, ao fim de semanas, finalmente avistámos a baleia, Ahab gritou algo que jamais esquecerei: \"Avarem a popa, minha tripulação!\"",
+      'A caçada começou. Dias de calma, noites de tempestade. O Pequod deslizava pelas ondas como um animal feroz. E quando, ao fim de semanas, finalmente avistámos a baleia, Ahab gritou algo que jamais esquecerei: "Avarem a popa, minha tripulação!"',
     ],
   },
   {
@@ -160,7 +160,7 @@ const COCUNDA_MUNDOS: BookChapter[] = [
   {
     title: "Capítulo III",
     paragraphs: [
-      "A terceira noite foi a mais estranha. Bevins anotou: \"Os meus olhos veem, mas o meu cérebro recusa-se a aceitar. O que existe aqui não deveria existir, nem mesmo em sonho\".",
+      'A terceira noite foi a mais estranha. Bevins anotou: "Os meus olhos veem, mas o meu cérebro recusa-se a aceitar. O que existe aqui não deveria existir, nem mesmo em sonho".',
       "Ele tentou fugir, mas as ruas da cidade reorganizavam-se sempre que ele virava uma esquina. Cada porta dava para o mesmo corredor, cada janela mostrava paisagens de outros mundos: oceanos negros, desertos vermelhos, florestas de cogumelos gigantes.",
       "Anotou ainda que encontrou uma biblioteca, com livros escritos numa matéria escura e gelatinosa. Ao tocar-lhes, os livros tremiam, e as letras rearranjavam-se diante dos seus olhos.",
     ],
@@ -168,7 +168,7 @@ const COCUNDA_MUNDOS: BookChapter[] = [
   {
     title: "Capítulo IV",
     paragraphs: [
-      "O manuscrito termina de forma abrupta. A última frase, escrita a carvão e com caligrafia trémula, é a seguinte: \"Eles mostraram-me a Cocunda de Mundos. Não há regresso.\"",
+      'O manuscrito termina de forma abrupta. A última frase, escrita a carvão e com caligrafia trémula, é a seguinte: "Eles mostraram-me a Cocunda de Mundos. Não há regresso."',
       "Bevins nunca foi encontrado. Em 1934, um explorador norueguês afirmou ter chegado à mesma cidade, mas enlouqueceu antes de conseguir descrevê-la. Os mapas antigos não registam este lugar, e os seus habitantes, se é que ainda existem, continuam a aguardar.",
       "O manuscrito permanece guardado, à espera de alguém suficientemente corajoso — ou suficientemente louco — para o terminar.",
     ],
